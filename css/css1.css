@@ -9,16 +9,19 @@
 }
 
 div#div1 {
+  background: url("./src/img.sufei1.jpeg");
+  /* background-image: url("./src/img/sufei1.jpeg"); */
   position: absolute;
   left: 0;
   top: 0;
-  background-color: blue;
+  /* background-color: blue; */
   color: yellow;
   margin-top: 0;
   margin-right: 20%;
   margin-bottom: 70%;
-  width: 80%;
-  height: 30%;
+  width: 500px;
+  height: 300px;
+  border-style: groove;
 }
 
 div#div2 {
@@ -33,11 +36,12 @@ div#div2 {
 }
 
 div#div3 {
+  align-items: center;
   position: absolute;
+  background-color: black;
   top: 3em;
   left: 9em;
   border-style: double;
-  /* height: 100%;
-  width: 100%; */
-  margin-right: 0;
+  /* height: aotu;
+  width: auto; */
 }
