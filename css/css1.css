@@ -36,7 +36,7 @@ div#div2 {
 }
 
 div#div3 {
-  align-items: center;
+  margin: 0,auto;
   position: absolute;
   background-color: black;
   top: 3em;

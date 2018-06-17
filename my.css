@@ -1,0 +1,91 @@
+/* body { */
+/* 	background:gray; */
+/* } */
+
+.container {
+	display:block;
+	max-width:1080px;
+	margin:0 auto;
+}
+
+div.nav {
+	background-color:gray;
+}
+
+.fl {
+	float:left;
+}
+
+.fr {
+	float:right;
+}
+/* 利用伪元素清浮动 */
+.clear-float:after,
+.clear-float:before{
+	content:" ";
+	display: block;
+	clear:both;
+}
+.col-1 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:10%;
+}
+
+.col-2 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:20%;
+}
+
+.col-3 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:30%;
+}
+
+.col-4 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:40%;
+}
+
+.col-5 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:50%;
+}
+
+.col-6 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:60%;
+}
+
+.col-7 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:70%;
+}
+
+.col-8 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:80%;
+}
+
+.col-9 {
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:90%;
+}
+
