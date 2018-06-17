@@ -27,6 +27,7 @@ div.nav {
 	clear:both;
 }
 .col-1 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -34,6 +35,7 @@ div.nav {
 }
 
 .col-2 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -41,6 +43,7 @@ div.nav {
 }
 
 .col-3 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -48,6 +51,7 @@ div.nav {
 }
 
 .col-4 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -55,6 +59,7 @@ div.nav {
 }
 
 .col-5 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -62,6 +67,7 @@ div.nav {
 }
 
 .col-6 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -69,6 +75,7 @@ div.nav {
 }
 
 .col-7 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -76,6 +83,7 @@ div.nav {
 }
 
 .col-8 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
@@ -83,9 +91,32 @@ div.nav {
 }
 
 .col-9 {
+	float:letf;
 	display:block;
 	position:relative;
 	min-height:1px;
 	width:90%;
 }
-
+#info {
+	display:inline-block;
+	float:left;
+	margin-left:5%;
+	width:20%;
+	padding:1em;
+}
+#about {
+	display:inline-block;
+	float:right;
+	margin-top:0;
+	margin-right:5%;
+	width:20%;
+	padding:1em;
+}
+#main {
+	display:inline-block;
+	width:50%;
+	padding:1em;
+}
+* {
+	box-sizing:border-box;
+}
