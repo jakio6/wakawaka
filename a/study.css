@@ -1,0 +1,45 @@
+#me {
+
+}
+div#me img:hover{
+  boder-radius:20%;
+	background: red
+}
+div#me img {
+  height:100%;
+	border-radius: 50%
+}
+.lorem{
+	background:gray;
+	display: inline-block
+}	
+#nav {
+	background:rgba(20,20,20,0.3);
+	height: 20%;
+}
+.cf:after,
+.cf:before{
+	content:" ";
+	display:block;
+	clear:both;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+#left{
+	width:10%;
+	display:inline-block;
+  background-color: rgba(100,100,10,0.3)
+}
+#right{
+	display:inline-block;
+	width:10%;
+	 background-color: rgba(100,100,10,0.3)
+}
+body{
+	color:red;
+background:url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1529327516&di=c9b95db4a1bc292453e916a49b0f470f&src=http://img17.3lian.com/d/file/201702/14/bf13787b4f6a5c346c07b8f10466a682.jpg)
+}
