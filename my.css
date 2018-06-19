@@ -26,6 +26,13 @@ div.nav {
 	display: block;
 	clear:both;
 }
+.gray{
+	background:gray;
+}
+.blue{
+	background:blue;
+}
+
 .col-1 {
 	float:letf;
 	display:block;
