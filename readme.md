@@ -128,4 +128,30 @@ nav {
 <div>
 
 - 盒模型用普通的box类型的时候千万不能忘记了要把padding算进去,血的教训
-- 
+- 1em是一个大写M的高度
+## 继续
+>2018-06-19...离挂科还有半个月
+### css表格
+- `display:table;`
+- `display:tanle-row;`(现在都不知道row是什么意思....英语白学了)
+- `display:table-cell;`(好像是cell包含在row行中)
+- `display:table-caption;`
+
+### 柔性盒子 flex-box
+- 有些时候float和positioning什么的会会很麻烦
+- section元素
+- `display:flex`:告诉xx它的子元素要作为flexible boxes:
+	- 默认情况下,他们都将展开以填充父类的高度xx有足够的宽度来包装它们的内容
+- `flex:1`:告诉子元素他们的相对大小是什么,2的是1的两倍,0好像也有,可能和其他的有关
+
+- 插曲
+	- 如果没反应看下是不是选择器写错了
+	- `var section = document.querySelector('section');`:选元素
+	- ` var box = document.createElement('div');`box是div标签元素
+	- `box.textContent = 'This is a box';`添加文本内容
+	- `section.appendChild(box);`生儿子
+	- `createBtn.onclick = createBox;`:事件
+	- `while (section.firstChild)`第一个子元素存在
+	- `section.removeChild(section.firstChild);`:移除第一个子元素
+- 上课
+
