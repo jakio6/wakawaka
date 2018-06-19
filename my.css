@@ -19,7 +19,7 @@ div.nav {
 .fr {
 	float:right;
 }
-/* ����αԪ���帡�� */
+/* 鍒╃敤浼厓绱犳竻娴姩 */
 .clear-float:after,
 .clear-float:before{
 	content:" ";
@@ -105,25 +105,34 @@ div.nav {
 	width:90%;
 }
 #info {
-	display:inline-block;
+/* 	display:inline-block; */
 	float:left;
 	margin-left:5%;
 	width:20%;
-	padding:1em;
+	padding: 1%;
+/* 	padding:1em; */
 }
 #about {
-	display:inline-block;
-	float:right;
-	margin-top:0;
+/* 	display:inline-block; */
+	float:left;
+/* 	margin-top:0; */
 	margin-right:5%;
 	width:20%;
-	padding:1em;
+	padding:1%
+/* 	padding:1em; */
 }
 #main {
-	display:inline-block;
-	width:50%;
-	padding:1em;
+/* 	display:inline-block; */
+	float:left;
+	width:44%;
+	padding:1%;
+/* 	padding:1em; */
+/* 	杩欎釜甯冨眬涓璦bout涓嶅啀涓巑ain鍚岃鐨勫師鍥犳槸,鍔犱簡padding,瀹逛笉涓嬩簡,鍥版壈浜嗗ソ涔� */
 }
 * {
-	box-sizing:border-box;
+	/*! box-sizing:border-box; */
+}
+*{
+ margin:0;
+	padding:0
 }

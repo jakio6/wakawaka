@@ -126,3 +126,6 @@ nav {
 <div style="position:absolute;margin-right:0;margin bottom:0;">
 2018-06-17
 <div>
+
+- 盒模型用普通的box类型的时候千万不能忘记了要把padding算进去,血的教训
+- 
