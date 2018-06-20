@@ -155,3 +155,4 @@ nav {
 	- `section.removeChild(section.firstChild);`:移除第一个子元素
 - 上课
 
+- 脚本的标签我能给写成style,我正牛逼
