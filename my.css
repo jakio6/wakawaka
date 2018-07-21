@@ -6,7 +6,7 @@ p div {
 }
 .container {
 	display:block;
-	max-width:1080px;
+	/*max-width:1080px;*/
 	margin:0 auto;
 }
 
@@ -50,6 +50,7 @@ div.nav {
 #about {
 /* 	display:inline-block; */
 	float:left;
+	/*clear:left;*/
 /* 	margin-top:0; */
 	margin-right:5%;
 	width:20%;
@@ -82,9 +83,9 @@ div.nav {
 	position:relative;
 	border-radius: 5%;
 	/*overflow:hidden;*/
-	display: inline-block;
+	display: inline;
 	cursor:pointer;
-	margin:0 10px;
+	/*margin:0 .2em;*/
 }
 .dpc:hover{
 	/*overflow:visible;*/
@@ -95,9 +96,9 @@ div.nav {
 .dpc:hover .drop-down{
 	display: block;
 	opacity: 1;
-	height:initial;
 	/*overflow:visible;*/
 	height:initial;
+	width: 100%;
 }
 .drop-down {
 	
@@ -107,7 +108,7 @@ div.nav {
 	it confuses me a lot when I set the drop-down'opacity to 0,
 	it almost make me crazy until I set it back to 1......
 	but some transition missed now..
-	*/
+	
 
 	/*
 	ok,I finally have to let the drop-down always display in block,
@@ -115,21 +116,34 @@ div.nav {
 	and set the drop-down's height default to 0,
 	so it  can't be touched when the mouse not hover
 	*/
+	/*..
+		here comes another problem :
+		why there can be a transition from
+		height 0 to 100px,
+		while 0 to 100% can't?
+		sorry from 0 to initial ....
+		was it because the value of  initial was unkonwn 
+		when the browser was to count for the transition?
+		just like when I only change the overflow properity
+		the opacity won't transition...
+		emmm, the overflow properity of inline element maybe?
+	*/
 	position:absolute;
 	top:100%;
-	width:100%;
 	left:0;
+	/*width:100%;*/
 	height:0;
+	width:0;
 	background:#ffffff;
 	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
 	/*border-bottom-left-radius: 5%;*/
 	/*border-bottom-right-radius: 5%;*/
 	border-radius:5%;
-	/*opacity: 0;*/
+/*	opacity: 0;
 	transition-property:opacity;
-	transition-duration:1.5s;
-	display:block;
-	height:0;
+	transition-duration:2s;
+*/	display:block;
+
 	overflow:hidden;
 }
 .drop-down li{
@@ -138,7 +152,7 @@ div.nav {
 }
 .drop-down li:hover{
 	background-color:rgba(0,0,0,0.5);
-	width:initial;
+	/*width:initial;*/
 }
 /*.test {
 	position:relative;
@@ -154,3 +168,38 @@ div.nav {
 	that's all....
 	made
 */
+*{
+	transition-property: all;
+	transition-duration: 0.5s;
+	/*transform-style: auto;*/
+	/*animation: all 3s;*/
+}
+
+/*up there was css for drop-dwon list*/
+/* down here was sth for box-shadow*/
+.shadow {
+		box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 3px;
+}
+#main {
+	background: white;
+}
+#main div:hover{
+	margin:1px;
+	box-shadow:rgba(0, 0, 0, 0.15) 0 2px 2px ,rgba(0, 0, 0, 0.15) 0 -2px 2px;
+}
+a {
+	text-decoration: none;
+}
+/*.nav {
+	position:fixed;
+	top:0;
+	width:100%;
+}*/
+/*.nav ~ div{
+	position:fixed;
+	top: 1em;
+}
+*/
+* {
+	box-sizing:content-box;
+}
