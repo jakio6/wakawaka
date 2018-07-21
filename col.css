@@ -1,0 +1,71 @@
+.col-1 {
+	float:left;
+	display:block;
+/* 	position:relative; */
+/* 	min-height:1px; */
+	width:10%;
+}
+
+.col-2 {
+	float:left;
+	display:block;
+	/* position:relative; */
+	min-height:1px;
+	width:20%;
+/* 	height:500px */
+}
+
+.col-3 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:30%;
+}
+
+.col-4 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:40%;
+}
+
+.col-5 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:50%;
+}
+
+.col-6 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:60%;
+}
+
+.col-7 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:70%;
+}
+
+.col-8 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:80%;
+}
+
+.col-9 {
+	float:left;
+	display:block;
+	position:relative;
+	min-height:1px;
+	width:90%;

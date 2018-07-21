@@ -1,6 +1,6 @@
-/* body { */
-/* 	background:gray; */
-/* } */
+ body { 
+ 	background:white; 
+ } 
 p div {
 	display:inline-block;
 }
@@ -11,9 +11,12 @@ p div {
 }
 
 div.nav {
-	background-color:gray;
+	background-color:#2f3e45;
+	color: #dddddd;
 }
-
+ * {
+	    transition:width 1s, height 3s, background-color 1s, transform 1s;
+} 
 .fl {
 	float:left;
 }
@@ -21,7 +24,6 @@ div.nav {
 .fr {
 	float:right;
 }
-/* 闂佸憡宸婚弲婵嬪极閵堝棗顕辨い蹇撳鐢绱掓潏鈺佇ｇ紒鏃囶嚙闇夋い鏃傚帶琚� */
 .clear-float:after,
 .clear-float:before{
 	content:" ";
@@ -35,78 +37,8 @@ div.nav {
 	background:rgba(0,0,255,0.5);
 }
 
-.col-1 {
-	float:left;
-	display:block;
-/* 	position:relative; */
-/* 	min-height:1px; */
-	width:10%;
-}
 
-.col-2 {
-	float:left;
-	display:block;
-	/* position:relative; */
-	min-height:1px;
-	width:20%;
-/* 	height:500px */
-}
 
-.col-3 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:30%;
-}
-
-.col-4 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:40%;
-}
-
-.col-5 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:50%;
-}
-
-.col-6 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:60%;
-}
-
-.col-7 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:70%;
-}
-
-.col-8 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:80%;
-}
-
-.col-9 {
-	float:left;
-	display:block;
-	position:relative;
-	min-height:1px;
-	width:90%;
-}
 #info {
 /* 	display:inline-block; */
 	float:left;
@@ -130,21 +62,95 @@ div.nav {
 	width:44%;
 	padding:1%;
 /* 	padding:1em; */
-/* 	闁哄鏅滈悷銈夋煂濠婂懏鏆滈柛鎰╁妿濠€鏉库槈閹捐埖灏峛out婵炴垶鎸哥粔鎾疮閳ь剙鈽夐幘宕囩崜ain闂佸憡鑹鹃惌渚€銆侀幋锔藉剭闁告洦鍋勯弬褔鏌涢妷褍校婵¤鎷�,闂佸憡姊绘慨宕囪姳椤＄Ψdding,闁诲骸缍婇埀顒佺〒閻熸繂鈽夐幘鎰佸剮缂侇煉鎷�,闂佹悶鍎虫晶妤佺珶閸喓顩查柛鈩冦仠閸嬨劌鈽夐弮鎾村 */
 }
 /* div#main::after{
 	clear:both
 }
  */
-* {
-	/*! box-sizing:border-box; */
-}
+
+
 *{
- margin:0;
+ 	margin:0;
 	padding:0;
 	box-sizing:border-box
 }
+
 .border {
 	border:1px solid red
 }
+.dpc{
+	position:relative;
+	border-radius: 5%;
+	/*overflow:hidden;*/
+	display: inline-block;
+	cursor:pointer;
+	margin:0 10px;
+}
+.dpc:hover{
+	/*overflow:visible;*/
+	/*display: block;*/
+	background:white;
+	color:#333333;
+}
+.dpc:hover .drop-down{
+	display: block;
+	opacity: 1;
+	height:initial;
+	/*overflow:visible;*/
+	height:initial;
+}
+.drop-down {
+	
+	/*
+	use this because when drop down container was a inline element,
+	we can't set its width&height,thus the overflow properity didn't work,
+	it confuses me a lot when I set the drop-down'opacity to 0,
+	it almost make me crazy until I set it back to 1......
+	but some transition missed now..
+	*/
 
+	/*
+	ok,I finally have to let the drop-down always display in block,
+	thus the opacity transition can work,
+	and set the drop-down's height default to 0,
+	so it  can't be touched when the mouse not hover
+	*/
+	position:absolute;
+	top:100%;
+	width:100%;
+	left:0;
+	height:0;
+	background:#ffffff;
+	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
+	/*border-bottom-left-radius: 5%;*/
+	/*border-bottom-right-radius: 5%;*/
+	border-radius:5%;
+	/*opacity: 0;*/
+	transition-property:opacity;
+	transition-duration:1.5s;
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+.drop-down li{
+	display:block;
+	list-style: none;
+}
+.drop-down li:hover{
+	background-color:rgba(0,0,0,0.5);
+	width:initial;
+}
+/*.test {
+	position:relative;
+}*/
+* {
+	/*border:1px solid green ;*/
+}
+
+/*
+	inline :don't support overflow;
+	inline-block block:support overflow;
+	ehhh,seems that I was a fool....
+	that's all....
+	made
+*/
