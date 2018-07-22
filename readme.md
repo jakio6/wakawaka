@@ -157,3 +157,4 @@ nav {
 
 - 脚本的标签我能给写成style,我正牛逼
 - 任何元素都可以定位
+- variable in for used without defined may cause many problem ..

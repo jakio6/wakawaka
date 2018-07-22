@@ -6,7 +6,7 @@ p div {
 }
 .container {
 	display:block;
-	/*max-width:1080px;*/
+	max-width:1080px;
 	margin:0 auto;
 }
 
@@ -73,7 +73,7 @@ div.nav {
 *{
  	margin:0;
 	padding:0;
-	box-sizing:border-box
+	/*box-sizing:border-box*/
 }
 
 .border {
@@ -83,7 +83,7 @@ div.nav {
 	position:relative;
 	border-radius: 5%;
 	/*overflow:hidden;*/
-	display: inline;
+	/*display: inline;*/
 	cursor:pointer;
 	/*margin:0 .2em;*/
 }
@@ -98,7 +98,7 @@ div.nav {
 	opacity: 1;
 	/*overflow:visible;*/
 	height:initial;
-	width: 100%;
+	width:100%;
 }
 .drop-down {
 	
@@ -169,6 +169,8 @@ div.nav {
 	made
 */
 *{
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.5s;
 	transition-property: all;
 	transition-duration: 0.5s;
 	/*transform-style: auto;*/
@@ -183,12 +185,28 @@ div.nav {
 #main {
 	background: white;
 }
+#main div {
+	color:gray;
+	max-height: 3em;
+	overflow: hidden;
+	margin-top: 1.2em;
+}
 #main div:hover{
 	margin:1px;
 	box-shadow:rgba(0, 0, 0, 0.15) 0 2px 2px ,rgba(0, 0, 0, 0.15) 0 -2px 2px;
+	max-height:8em;
+	/*overflow: visible;*/
 }
-a {
+#main a {
 	text-decoration: none;
+	color:rgb(255, 68, 0);
+	
+}
+a:hover{
+
+}
+a:visited {
+	color: initial;
 }
 /*.nav {
 	position:fixed;
@@ -200,6 +218,14 @@ a {
 	top: 1em;
 }
 */
-* {
-	box-sizing:content-box;
+
+.nav .dpc {
+	border: 1px solid gray;
+	border-radius:10%;
+	background:rgba(100,100,100,0.5);
 }
+/*a:hover {
+	background: #2f3e45;
+	position:relative;
+	left:3px;
+}*/

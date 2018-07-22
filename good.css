@@ -1,0 +1,63 @@
+.dpc{
+	position:relative;
+	border-radius: 5%;
+	display: inline;
+	cursor:pointer;
+}
+.dpc:hover{
+	background:white;
+	color:#333333;
+}
+.dpc:hover .drop-down{
+	display: block;
+	opacity: 1;
+	height:initial;
+	width: 100%;
+}
+.drop-down {
+	position:absolute;
+	top:100%;
+	left:0;
+	height:0;
+	width:0;
+	background:#ffffff;
+	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
+	border-radius:5%;
+	display:block;
+	overflow:hidden;
+}
+.drop-down li{
+	display:block;
+	list-style: none;
+}
+.drop-down li:hover{
+	background-color:rgba(0,0,0,0.5);
+}
+.shadow {
+		box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 3px;
+}
+table th {
+	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 3px;
+}
+table {
+	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 3px;
+}
+#nav {
+	background-color:#2f3e45;
+	color: #dddddd;
+}
+a:hover {
+	/*background: #2f3e45;*/
+	position:relative;
+	left:3px;
+}
+th:hover {
+	background: rgba(33,33,33,0.2);
+}
+* {
+	transition-property: all;
+	transition-duration: 1s;
+}
+tr:hover {
+	box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 3px;
+}

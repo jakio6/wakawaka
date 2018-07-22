@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>don't touch it</title>
+	<link rel="stylesheet" href="../my.css">
+	<style>
+		body {
+			width:1080;
+			height:600;
+			background:white;
+		}
+		#this-main {
+			margin:0 auto;
+			width:400px;
+			height:600px;
+			background:white;
+			position:relative;
+			top:200%;
+			overflow:hidden;
+			box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
+		}
+		#this-main *{
+			transition:none;
+		}
+		#this-container{
+			position:relative;
+			top:-100px;
+		}
+		#alert {
+			position:fixed;
+			top:0;
+			left:30%;
+			margin:0 auto;
+			display:block;
+			width:40%;
+			height:0px;
+			overflow:hidden;
+			/*border:1px solid red;*/
+			background:white;
+			color:black;
+			/*opacity: 0.6;*/
+			box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
+			z-index: 999;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 3em;
+			/*margin-top:50px;*/
+			transition-duration: 1s;
+		}
+		#alert *{
+			/*margin:;*/
+			/*margin-top:20%;*/
+			position: relative;
+			top:30%;
+		}
+		#menu {
+			position:fixed;
+			right:2em;
+			top:30%;
+			width:300px;
+			height:100px;
+		}
+		#menu *{
+			font-size: 3em;
+			border-radius:10%; 
+		}
+
+		.black {
+			background:black;
+		}
+		.white {
+			background: white;
+		}
+		.cell {
+			display:inline;
+			width:100px;
+			height:100px;
+			float:left;
+			/*background: black*/
+			box-shadow:rgba(0, 0, 0, 0.15) 0px 4px 4px;
+		}
+		.row {
+			width:100%;
+			height:100px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="nav clear-float">
+		<span class="fl dpc"><a href="../index.html">back</a></span>
+	</div>
+	<div id="alert"></div>
+	<!-- <div id="menu" class="shadow">
+		<div class="shadow">speed up</div>
+		<div class="shadow" onclick="restart(v)">start</div>
+		<div class="shadow">speed down</div>
+	</div> -->
+	<div id="this-main">
+		<div id="this-container">
+		</div>
+	</div>
+</body>
+<script>
+		function init()
+	{	
+		var a=$('this-container');
+		while(a.childNodes.length>1){
+			console.log(a.childNodes.length);
+			console.log(a.firstChild);
+
+			a.removeChild(a.firstChild)
+		}
+		a.style.top='-100px'
+		for (var i=0;i<6;i++){
+			crow(1);
+		}
+	}
+	function $(id) {
+
+		return va=document.getElementById(id);
+	}
+	function crow(top){
+		var c=$('this-container');
+		var row=cdiv('row');
+		var a=['cell','cell','cell','cell']
+		var b=Math.floor(Math.random()*4);
+		a[b]='cell black'
+		for(i=0;i<4;i++){
+			row.appendChild(cdiv(a[i]));
+		}
+		if(c.firstChild == 'null')
+			c.appendChild("row");
+		else
+			c.insertBefore(row,c.firstChild);
+		if (top==0){
+			c.removeChild(c.childNodes[c.childNodes.length-1]);
+		}
+	}
+	function cdiv(className){
+		var div=document.createElement('div');
+		div.className=className;
+		return div;
+	}
+	function move(){
+			var a = $('this-container');
+			var top=parseInt(window.getComputedStyle(a,null)['top'])+2;
+			a.style.top=top + 'px';
+			count+=1;
+			if(count==50){
+				lose(top);
+				crow(top);
+				a.style.top=top-100+'px';
+				count=0
+			}
+			setClick();
+	}
+	var count=0;
+	var clk;
+	var v=30;
+	function speed(t){
+		clk=window.setInterval(move,t);
+	}
+	function lose(top){
+		var a=$('this-container').childNodes;
+
+		if(top==0&&getLast()&&a[a.length-2]==getLast().parentNode){
+			clearInterval(clk);
+			note('hahaha you lose');
+		}
+	};
+	function note(string){
+		var a=$('alert');
+		a.style.height = '200px';
+		var d=document.createElement('span');
+		d.appendChild(document.createTextNode(string));
+		a.appendChild(d);
+		setTimeout(function(){
+			a.style.height='0';
+		},5000)
+	}
+	function start(t){
+		speed(t);
+	}
+
+	function getLast(){
+		var a=document.getElementsByClassName('black');
+		return a?a[a.length-1]:null;
+	}
+		function setClick(){	
+			if(getLast())
+			getLast().setAttribute("onclick","clik()");
+
+		}
+		function clik(){
+			var a=getLast();
+			a.classList.remove('black');
+			a.classList.add('white');
+			a.setAttribute("onclick",'')
+		}
+		function restart(){
+			clearInterval(clk);
+			init();
+			start(100);
+		}
+		init();
+		start(30);
+</script>
+</html>
