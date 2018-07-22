@@ -1,12 +1,13 @@
  body { 
  	background:white; 
+ 	box-shadow: inset rgba(0,0,0,0.2) 0 0 4px;
  } 
 p div {
 	display:inline-block;
 }
 .container {
 	display:block;
-	max-width:1080px;
+	/*max-width:px;*/
 	margin:0 auto;
 }
 
@@ -43,8 +44,11 @@ div.nav {
 /* 	display:inline-block; */
 	float:left;
 	margin-left:5%;
+	/*margin-left:50px;*/
 	width:20%;
+	/*width:200px;*/
 	padding: 1%;
+	/*padding: 10px;*/
 /* 	padding:1em; */
 }
 #about {
@@ -53,22 +57,33 @@ div.nav {
 	/*clear:left;*/
 /* 	margin-top:0; */
 	margin-right:5%;
+	/*margin-right:50px;*/
 	width:20%;
-	padding:1%
+	/*width:200px;*/
+	padding:1%;
+	/*padding:10px;*/
 /* 	padding:1em; */
 }
 #main {
 /* 	display:inline-block; */
 	float:left;
 	width:44%;
+	/*width:440px;*/
 	padding:1%;
+	/*overflow:hidden;*/
+	/*padding:10px;*/
 /* 	padding:1em; */
 }
 /* div#main::after{
 	clear:both
 }
  */
-
+#main h1 {
+	color:red;
+}
+#main h3 {
+	color: gold;
+}
 
 *{
  	margin:0;
@@ -189,7 +204,8 @@ div.nav {
 	color:gray;
 	max-height: 3em;
 	overflow: hidden;
-	margin-top: 1.2em;
+	margin-top: 0.8em;
+	margin-bottom: 1.2em;
 }
 #main div:hover{
 	margin:1px;
@@ -229,3 +245,23 @@ a:visited {
 	position:relative;
 	left:3px;
 }*/
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.dpc:hover .duilian.drop-down {
+	width:30%;
+	height:200px;
+}
+.dpc:hover .duilian.drop-down li{
+	height:50px;
+	font-size: 40px;
+}
+#about .duilian{
+	left:initial;
+	right:30%;
+}
+#info .duilian {
+	left:30%;
+}
